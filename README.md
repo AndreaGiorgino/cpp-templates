@@ -1,3 +1,3 @@
-# cpp_templates
+# cpp-templates
 
-Collection of cpp23 project templates.
+Collection of Cpp23 templates
