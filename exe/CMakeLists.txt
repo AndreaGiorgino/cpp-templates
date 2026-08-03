@@ -17,7 +17,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Dependencies
 #
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/Options.cmake)
+include(${CMAKE_CURRENT_SOURCE_DIR}/CMake/Options.cmake)
 
 #
 # Target

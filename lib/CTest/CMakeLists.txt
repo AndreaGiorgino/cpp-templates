@@ -61,3 +61,5 @@ foreach(TEST_FILE ${SOURCE_FILES})
         COMMAND CommonCxxTests ${TEST_NAME}
     )
 endforeach()
+
+include(${CMAKE_CURRENT_SOURCE_DIR}/CMake/PostBuild.cmake)
