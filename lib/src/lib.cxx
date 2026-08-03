@@ -1,1 +1,4 @@
-#include "lib/lib.hxx"
+#include "libnamespace/lib.hxx"
+
+namespace libnamespace {
+}
