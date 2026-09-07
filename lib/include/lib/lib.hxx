@@ -1,4 +1,7 @@
+
 #pragma once
+#ifndef H_LIB
+#define H_LIB
 
 namespace libnamespace {
 class lib final {
@@ -19,3 +22,5 @@ class lib final {
    private: // members
 };
 } // namespace libnamespace
+
+#endif

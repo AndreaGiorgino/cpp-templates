@@ -24,41 +24,31 @@ cd libnamespace
 ### Debug
 
 ```bash
-cmake -B build -DDEBUG=ON \
-    && cmake --build build --parallel $(($(nproc) - 1))
+cmake -B build -DDEBUG=ON && \
+    cmake --build build --parallel $(($(nproc) - 1))
 ```
 
 ### Testing
 
 ```bash
-cmake -B build \
-    -DLIB_BUILD_TESTING=ON \
-    && cmake --build build --parallel $(($(nproc) - 1)) \
-    && ctest --test-dir build 
+cmake -B build -DLIB_BUILD_TESTING=ON && \
+    cmake --build build --parallel $(($(nproc) - 1)) && \
+    ctest --test-dir build 
 ```
 
 ### Example
 
 ```bash
-cmake -B build \
-    -DLIB_BUILD_EXAMPLE=ON \
-    && cmake --build build --parallel $(($(nproc) - 1))
-
-./build/example/example
+cmake -B build -DLIB_BUILD_EXAMPLE=ON && \
+    cmake --build build --parallel $(($(nproc) - 1)) && \
+    ./build/example/example
 ```
-
 
 ## Usage
 
-```cpp
-using namespace libnamespace;
+Look at [example](example) for an example usage
 
-auto main(int, char**) -> int {
+### Quick reference
 
-    ...
-
-    return 0;
-}
-```
-
-> Look at [example](example) for more
+Name | Brief
+:--- | :----
