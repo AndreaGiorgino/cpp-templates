@@ -1,6 +1,6 @@
 # libnamespace
 
-lib brief description
+HTML interface library in Cpp23
 
 > [!IMPORTANT]
 > Since this library is still in development, it may not work correctly or some
@@ -15,40 +15,50 @@ lib brief description
 ### Compilation
 
 ```bash
-git clone https://github.com/giorgi.page/libnamespace
+git clone https://github.com/AndreaGiorgino/libnamespace
 cd libnamespace
 
 ./build.sh
 ```
 
-### Debug
+Build targets:
 
-```bash
-cmake -B build -DDEBUG=ON && \
-    cmake --build build --parallel $(($(nproc) - 1))
-```
+- `build`
+- `debug`
+- `test`
+- `example`
 
-### Testing
-
-```bash
-cmake -B build -DLIB_BUILD_TESTING=ON && \
-    cmake --build build --parallel $(($(nproc) - 1)) && \
-    ctest --test-dir build 
-```
-
-### Example
-
-```bash
-cmake -B build -DLIB_BUILD_EXAMPLE=ON && \
-    cmake --build build --parallel $(($(nproc) - 1)) && \
-    ./build/example/example
-```
+> Run `./build.sh --help` for the build script usage
 
 ## Usage
 
 Look at [example](example) for an example usage
 
-### Quick reference
+## ABI quick reference
 
-Name | Brief
-:--- | :----
+### libclass
+
+Capacity:
+
+| Method name | Brief                       |
+| :---------- | :-------------------------- |
+
+Lookup:
+
+| Method name | Brief                  |
+| :---------- | :--------------------- |
+
+Modifiers:
+
+| Method name  | Brief                                |
+| :----------- | :----------------------------------- |
+
+IO interface:
+
+| Method name | Brief                                      |
+| :---------- | :----------------------------------------- |
+
+### Exceptions
+
+| Exception name | brief                       |
+| :------------- | :-------------------------- |

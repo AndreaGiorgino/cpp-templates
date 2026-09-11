@@ -1,10 +1,15 @@
 cmake_minimum_required(VERSION 3.24)
 
 project(
-    lib
+    libnamespace
     VERSION 1.0.0
     LANGUAGES CXX
 )
+
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 #
 # Dependencies
@@ -45,10 +50,12 @@ target_include_directories(
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include>
         $<INSTALL_INTERFACE:include>
+    PRIVATE
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
 )
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/CMake/PostBuild.cmake)
 
-if(LIB_BUILD_EXAMPLE)
+if(LIBNAMESPACE_BUILD_EXAMPLE)
     add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/example)
 endif()
